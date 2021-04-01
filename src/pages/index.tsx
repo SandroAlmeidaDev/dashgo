@@ -1,22 +1,62 @@
-import React from 'react'
-import Head from 'next/head'
+import {
+  Flex,
+  Input,
+  Button,
+  Stack,
+  FormLabel,
+  FormControl
+} from '@chakra-ui/react'
 
-import RocketseatLogo from '../assets/rocketseat.svg'
-
-import { Container } from '../styles/pages/Home'
-
-const Home: React.FC = () => {
+export default function Home() {
   return (
-    <Container>
-      <Head>
-        <title>Homepage</title>
-      </Head>
+    <Flex w="100vw" h="100vh" align="center" justify="center">
+      <Flex
+        as="form"
+        width="100%"
+        maxWidth={360}
+        bg="gray.800"
+        p="8"
+        borderRadius={8}
+        flexDir="column"
+      >
+        <Stack spacing="4">
+          <FormControl>
+            <FormLabel htmlFor="email">E-mail</FormLabel>
+            <Input
+              name="email"
+              id="email"
+              type="email"
+              focusBorderColor="pink.500"
+              bgColor="gray.900"
+              variant="filled"
+              _hover={{
+                bgColor: 'gray.900'
+              }}
+              size="lg"
+            />
+          </FormControl>
 
-      <RocketseatLogo />
-      <h1>ReactJS Structure</h1>
-      <p>A ReactJS + Next.js structure made by Rocketseat.</p>
-    </Container>
+          <FormControl>
+            <FormLabel htmlFor="password">Senha</FormLabel>
+            <Input
+              name="password"
+              id="password"
+              type="password"
+              focusBorderColor="pink.500"
+              bgColor="gray.900"
+              variant="filled"
+              _hover={{
+                bgColor: 'gray.900'
+              }}
+              size="lg"
+            />
+          </FormControl>
+        </Stack>
+
+        <Button type="submit" mt="6" colorScheme="pink" size="lg">
+          Entrar
+        </Button>
+      </Flex>
+    </Flex>
   )
 }
-
-export default Home

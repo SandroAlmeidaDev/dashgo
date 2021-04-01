@@ -27,7 +27,9 @@
     "prettier"
   ],
   "rules": {
+    "react/react-in-jsx-scope": "off",
     "prettier/prettier": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "space-before-function-paren": "off",
     "react/prop-types": "off"
   }
