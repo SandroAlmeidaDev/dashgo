@@ -1,5 +1,6 @@
 import { Box, Flex, SimpleGrid, Text, theme } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
+
 import { Header } from '../components/Header'
 import { Sidebar } from '../components/Sidebar'
 
@@ -57,6 +58,11 @@ const options = {
 const series = [{ name: 'series1', data: [31, 120, 25, 18, 49, 150, 185] }]
 
 export default function Dashboard() {
+  // const isWideVersion = useBreakpointValue({
+  //   base: false,
+  //   lg: true
+  // })
+
   return (
     <Flex direction="column" h="100vh">
       <Header />
